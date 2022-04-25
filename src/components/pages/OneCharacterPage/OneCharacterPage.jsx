@@ -38,13 +38,19 @@ const OneCharacterPage = () => {
 
     return (
         <>
-            {oneCharacter && <div>
-                <input onChange={inputHandler} name="name" type="text" value={formData.name}/>
-                <input onChange={inputHandler} name="status" type="text" value={formData.status}/>
-                <input onChange={inputHandler} name="gender" type="text" value={formData.gender}/>
-                <input onChange={inputHandler} name="species" type="text" value={formData.species}/>
-                <img src={oneCharacter.image} alt=""/>
-                <button onClick={saveHandler}>Save</button>
+            {oneCharacter && <div className="character">
+                <div className="character__top">
+                    <img src={oneCharacter.image} alt=""/>
+                </div>
+                <div className="character__bottom">
+                    <input onChange={inputHandler} name="name" type="text" value={formData.name}/>
+                    <input onChange={inputHandler} name="status" type="text" value={formData.status}/>
+                    <input onChange={inputHandler} name="gender" type="text" value={formData.gender}/>
+                    <input onChange={inputHandler} name="species" type="text" value={formData.species}/>
+                </div>
+                <div className="character__buttons">
+                    <button onClick={saveHandler}>Save</button>
+                </div>
             </div>}
         </>
     )
