@@ -14,18 +14,23 @@ const OneCharacterFavoritesPage = ({rick}) => {
     const deleteHandler = () => dispatch(ACTION_deleteFromFavorite(rick.id))
 
     return (
-        <div>
-            <p>{rick.name}</p>
-            <p>{rick.status}</p>
-            <p>{rick.gender}</p>
-            <p>{rick.species}</p>
-            <button onClick={navigateHandler}>Go to card</button>
-            <button onClick={deleteHandler}>delete from favorite</button>
-            <img src={rick.image} alt=""/>
+        <div className="character">
+            <div className="character__top">
+                <img src={rick.image} alt="person"/>
+            </div>
+            <div className="character__bottom">
+                <p>{rick.name}</p>
+                <p>{rick.status}</p>
+                <p>{rick.gender}</p>
+                <p>{rick.species}</p>
+            </div>
+            <div className="character__buttons">
+                <button onClick={navigateHandler}>Go to card</button>
+                <button onClick={deleteHandler}>Delete from favorite</button>
+            </div>
         </div>
     )
 }
 
 export default OneCharacterFavoritesPage
 
-//OneCharacterFavoritesPage

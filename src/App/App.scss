@@ -1,0 +1,32 @@
+$--transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: $--transition;
+
+  background-color: #1e2940;
+
+  .main-container {
+    margin: 0 auto;
+    box-sizing: content-box;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+
+

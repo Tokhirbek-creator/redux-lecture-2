@@ -1,0 +1,45 @@
+@import "../../../App/App.scss";
+
+.header {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 11;
+  padding: 0px 50px;
+  width: 100vw;
+  min-width: 100vw;
+  height: 100px;
+  background-color: rgba(27, 70, 133, 0.85);
+  backdrop-filter: blur(5px);
+  filter: none !important;
+  pointer-events: auto !important;
+  user-select: auto !important;
+  transition: $--transition;
+
+  &-container {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: flex-start;
+    gap: 50px;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    counter-reset: item 0;
+    z-index: 12;
+    transition: $--transition;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+}
+
+

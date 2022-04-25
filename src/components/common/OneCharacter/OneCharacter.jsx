@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { ACTION_addToFavorite } from '../../../redux/actions/favoriteActions'
+import './OneCharacter.scss'
 
 const OneCharacter = ({rick}) => {
     const dispatch = useDispatch()
@@ -10,13 +11,19 @@ const OneCharacter = ({rick}) => {
     }
 
     return (
-        <div>
-            <p>{rick.name}</p>
-            <p>{rick.status}</p>
-            <p>{rick.gender}</p>
-            <p>{rick.species}</p>
-            <button onClick={favoriteHandler}>add to favorite</button>
-            <img src={rick.image} alt=""/>
+        <div className="character">
+            <div className="character__top">
+                <img src={rick.image} alt="person"/>
+            </div>
+            <div className="character__bottom">
+                <p>{rick.name}</p>
+                <p>{rick.status}</p>
+                <p>{rick.gender}</p>
+                <p>{rick.species}</p>
+            </div>
+            <div className="character__buttons">
+                <button onClick={favoriteHandler}>add to favorite</button>
+            </div>
         </div>
     )
 }

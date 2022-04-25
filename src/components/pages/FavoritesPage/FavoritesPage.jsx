@@ -5,7 +5,7 @@ import OneCharacterFavoritesPage from '../../common/OneCharacterFavoritesPage/On
 const FavoritesPage = () => {
     const favorite = useSelector(state => state.favorite)
     return (
-        <div>
+        <div className="mainpage">
             {favorite && favorite.map(el => <OneCharacterFavoritesPage key={el.key} rick={el}/>)}
         </div>
     )
